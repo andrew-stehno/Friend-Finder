@@ -14,12 +14,16 @@
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">Friend Finder</h1>
-                <p class="lead">Make your selection based on how likely you agree with the following statements. Choose
-                    5 if
-                    you completely agree, 1 if you completely disagree.
+                <p class="lead">Lets get started!
                 </p>
+                <a class="btn btn-primary" href="/" role="button">Home</a>
             </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">Members</a>
+            </div>
+        </footer>
 
         <div class="row">
             <div class="col-lg-12">
@@ -31,123 +35,122 @@
                         <form>
                             <div class="form-group">
                                 <label for="enterUsername">Username</label>
-                                <input type="text" class="form-control" id="user-name" aria-describedby="emailHelp"
-                                    placeholder="Username">
-                                <small class="form-text text-muted">Please enter your username.</small>
+                                <input type="text" class="form-control data-input" id="user-name"
+                                    aria-describedby="emailHelp" placeholder="Please enter your username.">
                             </div>
                             <div class="form-group">
                                 <label for="enterPhotoURL">Photo</label>
-                                <input type="text" class="form-control" id="member-photo" placeholder="Photo URL">
-                                <small class="form-text text-muted">Please enter a photo URL.</small>
+                                <input type="text" class="form-control data-input" id="member-photo"
+                                    placeholder="Please enter a photo URL.">
                             </div>
                             <div class="form-group">
-                                <label for="question1">Example select</label>
-                                <select class="form-control" id="question1">
+                                <label for="question1">I enjoy long walks on the beach.</label>
+                                <select class="form-control answer-input" id="question1">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question2">Example select</label>
-                                <select class="form-control" id="question2">
+                                <label for="question2">I prefer the company of people with strong personalities.</label>
+                                <select class="form-control answer-input" id="question2">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question3">Example select</label>
-                                <select class="form-control" id="question3">
+                                <label for="question3">I enjoy being outdoors.</label>
+                                <select class="form-control answer-input" id="question3">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question4">Example select</label>
-                                <select class="form-control" id="question4">
+                                <label for="question4">I dislike reading.</label>
+                                <select class="form-control answer-input" id="question4">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question5">Example select</label>
-                                <select class="form-control" id="question5">
+                                <label for="question5">I don't look forward to the weekend.</label>
+                                <select class="form-control answer-input" id="question5">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question6">Example select</label>
-                                <select class="form-control" id="question6">
+                                <label for="question6">I like avocados.</label>
+                                <select class="form-control answer-input" id="question6">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question7">Example select</label>
-                                <select class="form-control" id="question7">
+                                <label for="question7">I enjoy traveling abroad.</label>
+                                <select class="form-control answer-input" id="question7">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question8">Example select</label>
-                                <select class="form-control" id="question8">
+                                <label for="question8">I never use public transit.</label>
+                                <select class="form-control answer-input" id="question8">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question9">Example select</label>
-                                <select class="form-control" id="question9">
+                                <label for="question9">I enjoy rainy days.</label>
+                                <select class="form-control answer-input" id="question9">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="question10">Example select</label>
-                                <select class="form-control" id="question10">
+                                <label for="question10">I look forward to going to work on Mondays.</label>
+                                <select class="form-control answer-input" id="question10">
                                     <option selected value="0">Choose an option</option>
-                                    <option value="1">1</option>
+                                    <option value="1">1 (Strongly disagree)</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5 (Strongly agree)</option>
                                 </select>
                             </div>
 
@@ -158,11 +161,45 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/friends">Members</a>
+
+        <!-- Modal Results-->
+        <div class="modal fade" id="modal-results" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Your match!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+
+        <!-- Modal Invalid-->
+        <div class="modal fade" id="modal-invalid" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Invalid entry!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -176,29 +213,47 @@
 
     <script type="text/javascript">
 
-    // Get values from form:================================ 
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        let newMember = {
-            memberName: $("#user-name").val().toLowerCase().trim(),
-            url: $("#member-photo").val().toLowerCase().trim(),
-            scores: [...$("select[id^='question']")].map(el => $(el).val().trim())
-        };
-        console.log(newMember);
+        // Get values from form:================================ 
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+            // if (inputValidate()) {
 
-        // Make request to server:===============================
-        $.ajax({url:"/api/friends", method:"POST", data: newMember}).then(function(data) {
-            console.log("new member added", data);
-            //trigger modal after adding in  name and image src
-            // Reset form after submit:==============================
-            $("user-name").val("");
-            $("#member-photo").val("");
-            $("select[id^='question']").map((i, el) => $(el).val('0'))
-        })
-            
-    });
+                let newMember = {
+                    memberName: $("#user-name").val().toLowerCase().trim(),
+                    url: $("#member-photo").val().toLowerCase().trim(),
+                    scores: [...$("select[id^='question']")].map(el => $(el).val().trim())
+                };
+                console.log(newMember);
 
-</script>
+                // Make request to server:===============================
+                $.ajax({ url: "/api/friends", method: "POST", data: newMember }).then(function (data) {
+                    console.log("new member added", data);
+                    // Reset form after submit:==============================
+                    $("#user-name").val("");
+                    $("#member-photo").val("");
+                    $("select[id^='question']").map((i, el) => $(el).val('0'))
+
+                    //trigger modal after adding in  name and image src
+                    // $("#modal-results").modal("toggle");
+                })
+            // }
+            // else {
+            //     $("#modal-invalid").modal("toggle");
+            // }
+        });
+
+        // function inputValidate() {
+        //     let valid = true;
+        //     if ($(".data-input") === "" || $(".answer-input") === "Choose an option") {
+        //         valid = false;
+        //         return valid;
+        //     }
+        //     else {
+        //         return valid;
+        //     }
+        // };
+
+    </script>
 
 </body>
 
