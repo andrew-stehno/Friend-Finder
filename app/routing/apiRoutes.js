@@ -30,8 +30,8 @@ module.exports = function (app) {
             for (let j = 0; j < friends.scores[j]; j++) {
 
                 scoreCounter += Math.abs(userData.scores[j] - friends.scores[j]);
-                if (scoreCounter  <= object.score) {
-                    console.log(friends.name);
+                if (scoreCounter <= object.score) {
+                    console.log("Best match: " + friends.name);
                     object.name = friends.name;
                     object.photo = friends.photo;
                     object.score = scoreCounter;
@@ -39,20 +39,10 @@ module.exports = function (app) {
             }
 
         }
-
-        //Look at each individual score and match it up with the index position 
-        //of the incoming scores IE user[0].scores[0] should match up to same question as incomingScores[0]
-        //we should take the abs value of the subtraction of the two to get a difference
-        //All the while in the outer loop we need a counter varibale keeping track of the total difference for each inner loop
-        //So then you check to see is the total difference less than your current lowest
-
-
-
-
-
+        
         friendsData.push(req.body);
         res.json(object);
     })
-
+    
 };
 
