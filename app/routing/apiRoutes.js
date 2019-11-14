@@ -1,6 +1,7 @@
 const friendsData = require("../data/friends.js");
 
 
+
 // Routing:==============================
 module.exports = function (app) {
 
@@ -9,20 +10,36 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (req, res) {
+        let object = {
+            name: "",
+            photo: "",
+            score: Infinity
+        }
         //Upon req.body we have the structure of a `friend`
+        let scoreCounter;
+        let userData = req.body;
         //we want to iterate through stored members AKA friendsData
-        // for (let i = 0; i < friendsData.length; i++) {
-        //     // let friends = friendsData[i];
-        //     // console.log(friends);
+        for (let i = 0; i < friendsData.length; i++) {
+            scoreCounter = 0;
+            let friends = friendsData[i];
+            console.log(friends);
+            console.log(scoreCounter);
+            console.log(object.score);
 
-        //     let scoreCounter = 0;
-        //     //We want to look at each friend and then iterate through each friends scores
-        //     for (let j = 0; j < friendsData[i].scores[j]; j++) {
-        //         scoreCounter += Math.abs(friendsData[i].scores[j] - friendsData.scores[j]);
-        //         // console.log(scoreCounter);
-        //     }
+            //We want to look at each friend and then iterate through each friends scores
+            for (let j = 0; j < friends.scores[j]; j++) {
 
-        // }
+                scoreCounter += Math.abs(userData.scores[j] - friends.scores[j]);
+                if (scoreCounter  <= object.score) {
+                    console.log(friends.name);
+                    object.name = friends.name;
+                    object.photo = friends.photo;
+                    object.score = scoreCounter;
+                }
+            }
+
+        }
+
         //Look at each individual score and match it up with the index position 
         //of the incoming scores IE user[0].scores[0] should match up to same question as incomingScores[0]
         //we should take the abs value of the subtraction of the two to get a difference
@@ -34,7 +51,7 @@ module.exports = function (app) {
 
 
         friendsData.push(req.body);
-        res.json(friendsData);
+        res.json(object);
     })
 
 };
