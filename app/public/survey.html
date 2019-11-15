@@ -192,7 +192,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        ...
+                        <p>Please enter valid data.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -217,44 +217,51 @@
         // Get values from form:================================ 
         $("#submit").on("click", function (event) {
             event.preventDefault();
-            // if (inputValidate()) {
+            if (inputValidate()) {
 
-            let newMember = {
-                memberName: $("#user-name").val().toLowerCase().trim(),
-                url: $("#member-photo").val().toLowerCase().trim(),
-                scores: [...$("select[id^='question']")].map(el => $(el).val().trim())
-            };
-            console.log(newMember);
+                let newMember = {
+                    memberName: $("#user-name").val().toLowerCase().trim(),
+                    url: $("#member-photo").val().toLowerCase().trim(),
+                    scores: [...$("select[id^='question']")].map(el => $(el).val().trim())
+                };
+                console.log(newMember);
 
-            // Make request to server:===============================
-            $.ajax({ url: "/api/friends", method: "POST", data: newMember }).then(function (data) {
-                console.log("new member added", data);
-                // Reset form after submit:==============================
-                $("#user-name").val("");
-                $("#member-photo").val("");
-                $("select[id^='question']").map((i, el) => $(el).val('0'))
+                // Make request to server:===============================
+                $.ajax({ url: "/api/friends", method: "POST", data: newMember }).then(function (data) {
+                    console.log("new member added", data);
+                    // Reset form after submit:==============================
+                    $("#user-name").val("");
+                    $("#member-photo").val("");
+                    $("select[id^='question']").map((i, el) => $(el).val('0'))
 
-                //trigger modal after adding in  name and image src
-                $("#match-name").text(data.name);
-                $("#match-photo").attr('src', data.photo);
-                $("#modal-results").modal("toggle");
-            })
-            // }
-            // else {
-            //     $("#modal-invalid").modal("toggle");
-            // }
+                    //trigger modal after adding in  name and image src
+                    $("#match-name").text(data.name);
+                    $("#match-photo").attr('src', data.photo);
+                    $("#modal-results").modal("toggle");
+                })
+            }
+            else {
+                $("#modal-invalid").modal("toggle");
+            }
         });
 
-        // function inputValidate() {
-        //     let valid = true;
-        //     if ($(".data-input") === "" || $(".answer-input") === "Choose an option") {
-        //         valid = false;
-        //         return valid;
-        //     }
-        //     else {
-        //         return valid;
-        //     }
-        // };
+        function inputValidate() {
+            var valid = true;
+
+            $(".data-input").each(function () {
+                if ($(this).val() === "") {
+                    valid = false;
+                }
+            });
+
+            $(".answer-input").each(function () {
+                if ($(this).val() === "0") {
+                    valid = false;
+                }
+            });
+
+            return valid;
+        }
 
     </script>
 
