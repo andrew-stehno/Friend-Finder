@@ -16,7 +16,7 @@ If you are running the application locally, it operates off of PORT 8080.  Enter
 
 ```localhost:8080```
 
-Then, simply enter your name, provide a URL link to a photo, and answer the 10 questions by weather you agree (5) with the statement, disagree (1), or any answer inbetween.  Your user data will then be compared to the members stored in the mysql database.  The member with the difference in score closest to your own, will be displayed.
+Then, simply enter your name, provide a URL link to a photo, and answer the 10 questions by weather you agree (5) with the statement, disagree (1), or any answer inbetween.  Your user data will then be compared to the members stored in the local server.  The member with the difference in score closest to your own, will be displayed.
 
 ![Screenshot](./images/screenshot.png)
 
